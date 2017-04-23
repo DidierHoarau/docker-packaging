@@ -1,0 +1,16 @@
+{
+  "name": "project-name",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+  ],
+  "author": "",
+  "homepage": "",
+  "license": "UNLICENSED",
+  "scripts": {
+    "packaging:prepare": "docker-packaging/prepare.sh",
+    "packaging:image-build": "docker-packaging/image-build.sh",
+    "packaging:service-deploy": "docker-packaging/service-deploy.sh",
+    "packaging:container-run": "docker-packaging/container-run.sh"
+  }
+}
