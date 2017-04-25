@@ -11,6 +11,6 @@
     "packaging:prepare": "docker-packaging/prepare.sh",
     "packaging:image-build": "docker-packaging/image-build.sh",
     "packaging:service-deploy": "docker-packaging/service-deploy.sh",
-    "packaging:container-run": "docker-packaging/container-run.sh"
+    "packaging:service-run": "docker-packaging/service-run.sh"
   }
 }

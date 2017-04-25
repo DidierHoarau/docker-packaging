@@ -8,8 +8,8 @@ fi
 
 
 # Script to be executed before?
-if [ -f ${PACKAGING_CONFIG}/container-run-before.sh ]; then
-  ${PACKAGING_CONFIG}/container-run-before.sh
+if [ -f ${PACKAGING_CONFIG}/service-run-before.sh ]; then
+  ${PACKAGING_CONFIG}/service-run-before.sh
 fi
 
 
@@ -19,6 +19,6 @@ docker-compose -p ${npm_package_name} up -d --remove-orphans
 
 
 # Script to be executed after?
-if [ -f ${PACKAGING_CONFIG}/container-run-after.sh ]; then
-  ${PACKAGING_CONFIG}/container-run-after.sh
+if [ -f ${PACKAGING_CONFIG}/service-run-after.sh ]; then
+  ${PACKAGING_CONFIG}/service-run-after.sh
 fi
