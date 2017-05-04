@@ -8,14 +8,14 @@ fi
 
 
 ENVIRONMENT="$1"
-COMPOSE_FILE_ENV=""
+COMPOSE_FILE="docker-compose.yml"
 if [ "${ENVIRONMENT}" != "" ]; then
   echo ENVIRONMENT = "${ENVIRONMENT}"
   if [ -f "${PACKAGING_CONFIG}/docker-compose-${ENVIRONMENT}.yml" ]; then
-    COMPOSE_FILE_ENV="-f docker-compose-${ENVIRONMENT}.yml"
-    echo Using: docker-compose.yml + docker-compose-${ENVIRONMENT}.yml
+    COMPOSE_FILE="docker-compose-${ENVIRONMENT}.yml"
   fi
 fi
+echo Using: ${COMPOSE_FILE}
 
 
 # Script to be executed before?
@@ -28,7 +28,7 @@ fi
 cd ${PACKAGING_CONFIG}
 docker-compose \
     -p ${npm_package_name} \
-    -f ${PACKAGING_CONFIG}/docker-compose.yml ${COMPOSE_FILE_ENV} \
+    -f ${COMPOSE_FILE} \
     up \
     -d \
     --remove-orphans
