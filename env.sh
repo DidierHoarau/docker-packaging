@@ -4,9 +4,9 @@
 export PROJECT_NAME=${npm_package_name}_${npm_package_version}
 export PROJECT_DIR=`pwd`
 
-export PACKAGING_CONFIG="$PROJECT_DIR/docker-packaging-config"
+export PACKAGING_CONFIG="${PROJECT_DIR}/docker-packaging-config"
 
-export PACKAGING_FILES="$PACKAGING_CONFIG/files"
+export PACKAGING_FILES="${PACKAGING_CONFIG}/files"
 
 
 # Checks
