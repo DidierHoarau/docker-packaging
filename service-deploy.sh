@@ -26,7 +26,7 @@ fi
 
 # Start the Docker project
 cd ${PACKAGING_CONFIG}
-docker deploy --compose-file ${COMPOSE_FILE} ${npm_package_name}
+docker stack deploy --compose-file ${COMPOSE_FILE} ${npm_package_name}
 
 
 # Script to be executed after?
